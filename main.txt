@@ -1,0 +1,50 @@
+import random
+import time
+alist=[]
+start=0
+end=0
+p=[]
+print('chooose from the type of data required:')
+print('1)Data generated randomly')
+print('2)Data evenly balanced ')
+print('3)Data unevenly balanced')
+a=input()
+if(a=='1'):
+    for i in range(15):
+        alist.append(random.randint(1,500))
+    print(alist)
+    print('pivot=',alist[0])
+    time_start = time.clock()
+    quickSort(alist)
+    time_elapsed = (time.clock() - time_start)
+    print(time_elapsed)
+    print(alist)
+    
+    
+elif(a=='2'):
+    for i in range(15):
+        alist.append(random.randint(1,50))
+    print(alist)
+    p.append(alist[0])
+    p.append(alist[int(len(alist)/2)])
+    p.append(alist[-1])
+    indexx=median(p,alist)
+    alist=swap(indexx)
+    print('pivot=',alist[0])
+    time_start = time.clock()
+    quickSort(alist)
+    time_elapsed = (time.clock() - time_start)
+    print(alist)
+    print(time_elapsed)
+
+else:
+    b=random.randint(1,100)
+    for i in range(15):
+        alist.append(i+b)
+    print(alist)
+    print('pivot=',alist[0])
+    time_start = time.clock()
+    quickSort(alist)
+    time_elapsed = (time.clock() - time_start)
+    print(time_elapsed)
+    print(alist)

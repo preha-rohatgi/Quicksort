@@ -1,0 +1,5 @@
+def swap(indexx):
+    temp=alist[indexx]
+    alist[indexx]=alist[0]
+    alist[0]=temp
+    return alist 

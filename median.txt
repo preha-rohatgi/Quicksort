@@ -1,0 +1,23 @@
+def median(array,alist):
+    print(array)
+    median=np.median(alist)
+    print('median',median)
+    small=100
+    index=0
+    start=0
+    end=0
+    for i in range(len(array)):
+        if(abs(array[i]-median)<small):
+            index=i
+            small=abs(array[i]-median)
+    print(array[index])
+    if(array[index]==alist[0]):
+        indexx=0
+    elif(array[index]==alist[-1]):
+        indexx=len(alist)-1
+    else:
+        indexx=int(len(alist)/2)
+        
+        
+    
+    return indexx
